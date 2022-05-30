@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RandomMeal</title>
+    <!-- CSS only -->
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Global Container -->
+    <div id="globalcontainer" class="container-fluid p-0">
+        <div id="main" class="d-flex flex-column justify-content-center align-items-center">
+            <!-- Background and blur -->
+            <div id="bkg">
+                <div id="dark"></div>
+            </div>
+            <!-- Navbar -->
+            <nav id="navbar" class="p-0 navbar bg-black rounded-bottom">
+                <div class="container-fluid d-flex flex-column justify-content-evenly align-items-center p-0">
+                    <ul class="list-inline my-0 d-flex align-items-center">
+                        <a class="navbar-brand text-light me-4" href="#">
+                            <img src="assets/logo-tp.png" alt="" width="60" height="60" class="d-inline-block align-text-top">
+                        </a>
+                        <a href="#"><li class="list-inline-item text-light me-4">Home</li></a>
+                        <a href="#faq"><li class="list-inline-item text-light me-4">FAQ</li></a>
+                        <a href="#profile"><li class="list-inline-item text-light">Profile</li></a>
+                    </ul>
+                </div>
+              </nav>
+              <!-- Title -->
+            <div id="title" class="container">
+                <h1 class="text-center text-light">RANDOM MEAL GENERATOR</h1>
+                <p class="text-center text-light mt-3" style="--bs-text-opacity: .8;">We are a small organization that creates a random recipe finder that is intended or specifically for housewives who are confused about choosing food recipes for the family.</p>
+                <div class="d-flex flex-column justify-content-center align-items-center mx-auto mt-5">
+                    <button id="mainbutton" type="button" class="btn rounded-0 mb-3 text-light" style="width: 160px;" data-bs-toggle="modal" data-bs-target="#exampleModalToggle">Filter</button>
+                    <form action="index.php" method="post">
+                        <button id="mainbutton" type="submit" name="randomnow" class="btn rounded-0 text-light" style="width: 160px;">Random Now!</button>
+                    </form>
+                    RESULT_BUTTON
+                </div>
+            </div>
+        </div>
+        <!-- FAQ -->
+        <div id="second">
+            <div id="wave" class="pt-4">
+                <div class="container">
+                    <h1 style="color: #BACC81;">Frequently Asked Question</h1>
+                </div>
+            </div>
+            <div id="faq" class="container">
+                <ul>
+                    <!-- Collapse Javascript (bootstrap) -->
+                    <a data-bs-toggle="collapse" href="#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration:none;"><li class="h5" style="color: #B65353;">How do I use the random recipe finder? </li></a>
+                    <div class="collapse" id="collapseExample">
+                        <div class="card card-body border-0">
+                            <p>Simply filter for any dietary requirements by clicking the “Vegetarian” or “Gluten Free” tick boxes (leave them unchecked if you don't have any), 
+                            then click on the meal that you want to find ideas for. A random but relevant recipe will then open up in a new tab in your browser! If what you see doesn’t appeal to you, you can pop back to the recipe generator and keep clicking until you find something that gets your mouth watering</p>
+                        </div>
+                    </div>
+                    <a data-bs-toggle="collapse" href="#collapseExample2" role="button" aria-expanded="false" aria-controls="collapseExample" style="text-decoration:none;"><li class="h5" style="color: #B65353;">What can I use the recipe finder for? </li></a>
+                    <div class="collapse" id="collapseExample2">
+                        <div class="card card-body border-0">
+                            <p>You can use God Dammit What Do You Want for any food-based decision, from last minute inspiration to a family's meal planning. Hit “Lunch” for a midday meal option, click “Brunch” to find something new for your lazy Sunday mornings, 
+                            or use it to make planning for your weekly shop a little easier</p>
+                        </div>
+                    </div>
+                </ul>
+            </div>
+            <!-- Profile -->
+            <div class="pt-4">
+                <div  class="container">
+                    <h1 style="color: #BACC81;" class=" my-4">Profile Team</h1>
+                </div>
+            </div>
+            <div id="profile" class="container">
+                <div class="boxprofile">
+                    <div id="cardgrup" class="row row-cols-5 g-5">
+                        <!-- Card 1 -->
+                        <div class="col">
+                          <div class="card h-100">
+                            <div class="test test1">
+                                <!-- <img src="/Assets/iroha.jpeg" class="card-img-top" alt="..."> -->
+                            </div>
+                            <div class="card-body">
+                              <h5 class="card-title text-center">Muhammad Aditya Hasta Pratama</h5>
+                              <p class="card-text text-center" style="font-weight: bold;">NIM: 2000360</p>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col">
+                            <div class="card h-100">
+                              <div class="test test2">
+                                  <!-- <img src="/Assets/contoh1.jpeg" class="card-img-top" alt="..."> -->
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center">Surya Alfin Maoludin</h5>
+                                <p class="card-text text-center">NIM:2001521</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col">
+                            <div class="card h-100">
+                              <div class="test test3">
+                                  <!-- <img src="/Assets/contoh1.jpeg" class="card-img-top" alt="..."> -->
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center">Muhammad Rafi Shidiq</h5>
+                                <p class="card-text text-center">NIM: 2004222</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="col">
+                            <div class="card h-100">
+                              <div class="test test4">
+                                  <!-- <img src="/Assets/contoh1.jpeg" class="card-img-top" alt="..."> -->
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center">Raden Fadhil Anugerah Ardiwilaga</h5>
+                                <p class="card-text text-center">NIM: 2004305</p>
+                              </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="col">
+                            <div class="card h-100">
+                              <div class="test test5">
+                                  <!-- <img src="/Assets/contoh1.jpeg" class="card-img-top" alt="..."> -->
+                              </div>
+                              <div class="card-body">
+                                <h5 class="card-title text-center">Arik Rizki Akbar</h5>
+                                <p class="card-text text-center">NIM : 2007392</p>
+                              </div>
+                            </div>
+                        </div>
+                      </div>
+                    </div>
+            </div>
+            <!-- Footer -->
+            <div id="footer" class="d-flex flex-column justify-content-center align-items-center my-4">
+                <div id="copyright" class="my-3">
+                    <p class="text-center">&copy; 2022 Copyright kelompok 3. All rights reserved. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modals -->
+    <!-- Filter Modals -->
+    <div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content" style="background-color: #013A20;">
+            <div class=" modal-header d-flex flex-row">
+                <div class="w-25">
+                </div>
+                <div class="w-50">
+                    <h5 class="modal-title text-center" id="exampleModalLael" style="color: white; justify-content: center; align-items: center;">Jenis Menu</h5>
+                </div>
+                <div class="w-25">
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="float:right;"></button>
+                </div>
+            </div>
+
+            <!-- Costumed Radio Button -->
+            <form action="" method="post">
+                <div class="modal-body m-resep " style="color: white;" id="modal-body-filter">
+                    <input type="radio" name="radioJenis" id="radio1" value="Makanan">
+                    <label class="container text-center" id="radio1" for="radio1">Food</label>
+                    <input type="radio" name="radioJenis" id="radio2" value="Minuman">
+                    <label class="container text-center" id="radio2" for="radio2">Drink</label>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Jenis Menu</button>
+            </div>
+        </form>
+          </div>
+        </div>
+    </div>
+
+    <!-- Filter modal 2 -->
+    <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #013A20;">
+                <div class=" modal-header d-flex flex-row">
+                    <div class="w-25">
+                        <button class="btn border-0" data-bs-target="#exampleModalToggle" data-bs-toggle="modal"><span style='color: white; font-size:20px;' class="bi bi-arrow-return-left"></span></button>
+                    </div>
+                    <div class="w-50">
+                        <h5 class="modal-title text-center" id="exampleModalLabel" style="color: white; justify-content: center; align-items: center;">Menu Resep</h5>
+                    </div>
+                    <div class="w-25">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="float:right;"></button>
+                    </div>
+                </div>
+            <form action="" method="post">
+            <div class="modal-body mresep" style="color: white;" id="modal-body-filter">
+                <div class="mresep2">
+                    <input type="radio" name="radioMenu" id="radio99" value="Pagi">
+                    <label class="container text-center" id="radio99" for="radio99">Pagi</label>
+                    <input type="radio" name="radioMenu" id="radio100" value="Siang">
+                    <label class="container text-center" id="radio100" for="radio100">Siang</label>
+                </div>
+                <input  type="radio" name="radioMenu" id="radio103" value="Malam">
+                <label class="container text-center" id="radio103" for="radio103">Malam</label>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-primary" type="button" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Next (Menu Daerah)</button>
+            </div>
+        </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Filter modal 3 -->
+    <div class="modal fade" id="exampleModalToggle3" aria-hidden="true" aria-labelledby="exampleModalToggleLabel3" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #013A20;">
+                <div class=" modal-header d-flex flex-row">
+                    <div class="w-25">
+                        <button class="btn border-0" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal"><span style='color: white; font-size:20px;' class="bi bi-arrow-return-left"></span></button>
+                    </div>
+                    <div class="w-50">
+                        <h5 class="modal-title text-center" id="exampleModalLabel" style="color: white; justify-content: center; align-items: center;">Menu Daerah</h5>
+                    </div>
+                    <div class="w-25">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="float:right;"></button>
+                    </div>
+                </div>
+                    <form action="" method="post">
+                        <div class="modal-body mresep" style="color: white;" id="modal-body-filter">
+                            <div class="mresep2">
+                                <input  type="radio" name="radioDaerah" id="radio105" value="Sumatera">
+                                <label class="container text-center" id="radio105" for="radio105">Sumatera</label>
+                                <input type="radio" name="radioDaerah" id="radio106" value="Jawa">
+                                <label class="container text-center" id="radio106" for="radio106">Jawa</label>
+                                <input type="radio" name="radioDaerah" id="radio107" value="Kalimantan">
+                                <label class="container text-center" for="radio107" id="radio107">Kalimantan</label>
+                                <input  type="radio" name="radioDaerah" id="radio108" value="Sulawesi">
+                                <label class="container text-center" id="radio108" for="radio108">Sulawesi</label>
+                            </div>
+                            <input  type="radio" name="radioDaerah" id="radio104" value="Papua">
+                            <label class="container text-center" id="radio104" for="radio104">Papua</label>
+                        </div>
+                        <div class="modal-footer">
+                            <!-- {% comment %} <button id="mainbutton" type="submit" name="randomnow" class="btn rounded-0 text-light" style="width: 160px;">Random Now!</button> {% endcomment %} -->
+                            <button class="btn btn-primary" type="button" onclick="getResultInputRadioButton()" data-bs-target="#exampleModalToggle3" data-bs-toggle="modal">Random Now</button>
+                        </div>                
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    <!-- Random Now Modals -->
+    <div class="modal fade" id="modalRandom" tabindex="-1" aria-labelledby="modalRandom" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content" style="background-color: #013A20;">
+                <div class=" modal-header d-flex flex-row">
+                    <div class="w-25">
+                    </div>
+                    <div class="w-50">
+                        <h5 class="modal-title text-center" id="exampleModalLabel" style="color: white; justify-content: center; align-items: center;">Your Recipe Is Ready</h5>
+                    </div>
+                    <div class="w-25">
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close" style="float:right;"></button>
+                    </div>
+                </div>
+                <div class="modal-body d-flex flex-column justify-content-center align-items-center">
+                    JUDUL_RESEP
+                    <h5 style="color: white;">-Rate Us-</h5> <br>
+                    <form action="index.php" method="POST" class="rating">
+                        <label>
+                          <input type="submit" name="stars1" value="1" />
+                          <span class="icon">★</span>
+                        </label>
+                        <label>
+                          <input type="submit" name="stars2" value="2" />
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                        </label>
+                        <label>
+                          <input type="submit" name="stars3" value="3" />
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>   
+                        </label>
+                        <label>
+                          <input type="submit" name="stars4" value="4" />
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                        </label>
+                        <label>
+                          <input type="submit" name="stars5" value="5" />
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                          <span class="icon">★</span>
+                        </label>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+<!-- JavaScript Bundle with Popper -->
+<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript" src="filter.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+</html>
